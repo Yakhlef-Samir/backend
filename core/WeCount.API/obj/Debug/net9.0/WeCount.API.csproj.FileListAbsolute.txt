@@ -35,3 +35,14 @@ C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\obj\Debug\net9
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\obj\Debug\net9.0\WeCount.API.pdb
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\obj\Debug\net9.0\WeCount.API.genruntimeconfig.cache
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\obj\Debug\net9.0\ref\WeCount.API.dll
+C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net9.0\DnsClient.dll
+C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net9.0\Microsoft.Extensions.Options.dll
+C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net9.0\Microsoft.Extensions.Primitives.dll
+C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net9.0\MongoDB.Bson.dll
+C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net9.0\MongoDB.Driver.dll
+C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net9.0\SharpCompress.dll
+C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net9.0\Snappier.dll
+C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net9.0\ZstdSharp.dll
+C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net9.0\WeCount.Infrastructure.dll
+C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net9.0\WeCount.Infrastructure.pdb

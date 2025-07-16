@@ -1,3 +1,5 @@
+using WeCount.Infrastructure.MongoDB;
+
 namespace WeCount.API
 {
     public class Startup

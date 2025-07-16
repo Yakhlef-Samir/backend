@@ -1,3 +1,6 @@
+using Microsoft.Extensions.Options;
+using MongoDB.Driver;
+
 namespace WeCount.Infrastructure.MongoDB;
 
 public class MongoDbContext
