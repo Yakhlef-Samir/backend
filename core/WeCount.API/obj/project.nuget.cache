@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "9r8p5NaaAls=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\samir\\Desktop\\Projet_fin_couple\\backend\\core\\WeCount.API\\WeCount.API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\samir\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.7\\microsoft.aspnetcore.openapi.9.0.7.nupkg.sha512",
+    "C:\\Users\\samir\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}
