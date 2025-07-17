@@ -10,3 +10,4 @@ C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.Domain\obj\Debug\n
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.Domain\obj\Debug\net8.0\refint\WeCount.Domain.dll
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.Domain\obj\Debug\net8.0\WeCount.Domain.pdb
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.Domain\obj\Debug\net8.0\ref\WeCount.Domain.dll
+C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.Domain\obj\Debug\net8.0\WeCount.Domain.csproj.AssemblyReference.cache

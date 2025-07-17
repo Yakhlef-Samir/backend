@@ -387,6 +387,9 @@
       "WeCount.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "MongoDB.Driver": "3.4.0"
+        },
         "compile": {
           "bin/placeholder/WeCount.Domain.dll": {}
         },

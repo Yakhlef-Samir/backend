@@ -129,6 +129,13 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[3.4.0, )",
+              "versionCentrallyManaged": true
+            }
+          },
           "centralPackageVersions": {
             "coverlet.collector": "6.0.2",
             "FluentAssertions": "7.0.0",
