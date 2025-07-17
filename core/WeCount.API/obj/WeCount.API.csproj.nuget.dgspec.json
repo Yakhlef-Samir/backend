@@ -13,18 +13,19 @@
         "packagesPath": "C:\\Users\\samir\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\samir\\Desktop\\Projet_fin_couple\\backend\\core\\WeCount.API\\obj\\",
         "projectStyle": "PackageReference",
+        "centralPackageVersionsManagementEnabled": true,
         "configFilePaths": [
           "C:\\Users\\samir\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net9.0"
+          "net8.0"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net9.0": {
-            "targetAlias": "net9.0",
+          "net8.0": {
+            "targetAlias": "net8.0",
             "projectReferences": {
               "C:\\Users\\samir\\Desktop\\Projet_fin_couple\\backend\\core\\WeCount.Application\\WeCount.Application.csproj": {
                 "projectPath": "C:\\Users\\samir\\Desktop\\Projet_fin_couple\\backend\\core\\WeCount.Application\\WeCount.Application.csproj"
@@ -48,13 +49,38 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net9.0": {
-          "targetAlias": "net9.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
           "dependencies": {
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
-              "version": "[9.0.7, )"
+              "version": "[8.0.0, )",
+              "versionCentrallyManaged": true
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[8.0.0, )",
+              "versionCentrallyManaged": true
             }
+          },
+          "centralPackageVersions": {
+            "coverlet.collector": "6.0.2",
+            "FluentAssertions": "7.0.0",
+            "FluentValidation": "11.12.0",
+            "FluentValidation.AspNetCore": "11.3.0",
+            "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.0",
+            "Microsoft.AspNetCore.OpenApi": "8.0.0",
+            "Microsoft.Extensions.Configuration": "9.0.0",
+            "Microsoft.Extensions.DependencyInjection": "9.0.0",
+            "Microsoft.Extensions.Options": "9.0.7",
+            "Microsoft.NET.Test.Sdk": "17.12.0",
+            "MongoDB.Driver": "3.4.0",
+            "Moq": "4.20.72",
+            "Serilog.AspNetCore": "8.0.4",
+            "Serilog.Sinks.Console": "6.0.0",
+            "Swashbuckle.AspNetCore": "8.0.0",
+            "xunit": "2.9.2",
+            "xunit.runner.visualstudio": "2.8.2"
           },
           "imports": [
             "net461",
@@ -88,18 +114,19 @@
         "packagesPath": "C:\\Users\\samir\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\samir\\Desktop\\Projet_fin_couple\\backend\\core\\WeCount.Application\\obj\\",
         "projectStyle": "PackageReference",
+        "centralPackageVersionsManagementEnabled": true,
         "configFilePaths": [
           "C:\\Users\\samir\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net9.0"
+          "net8.0"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net9.0": {
-            "targetAlias": "net9.0",
+          "net8.0": {
+            "targetAlias": "net8.0",
             "projectReferences": {
               "C:\\Users\\samir\\Desktop\\Projet_fin_couple\\backend\\core\\WeCount.Domain\\WeCount.Domain.csproj": {
                 "projectPath": "C:\\Users\\samir\\Desktop\\Projet_fin_couple\\backend\\core\\WeCount.Domain\\WeCount.Domain.csproj"
@@ -120,8 +147,27 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net9.0": {
-          "targetAlias": "net9.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "centralPackageVersions": {
+            "coverlet.collector": "6.0.2",
+            "FluentAssertions": "7.0.0",
+            "FluentValidation": "11.12.0",
+            "FluentValidation.AspNetCore": "11.3.0",
+            "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.0",
+            "Microsoft.AspNetCore.OpenApi": "8.0.0",
+            "Microsoft.Extensions.Configuration": "9.0.0",
+            "Microsoft.Extensions.DependencyInjection": "9.0.0",
+            "Microsoft.Extensions.Options": "9.0.7",
+            "Microsoft.NET.Test.Sdk": "17.12.0",
+            "MongoDB.Driver": "3.4.0",
+            "Moq": "4.20.72",
+            "Serilog.AspNetCore": "8.0.4",
+            "Serilog.Sinks.Console": "6.0.0",
+            "Swashbuckle.AspNetCore": "8.0.0",
+            "xunit": "2.9.2",
+            "xunit.runner.visualstudio": "2.8.2"
+          },
           "imports": [
             "net461",
             "net462",
@@ -151,18 +197,19 @@
         "packagesPath": "C:\\Users\\samir\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\samir\\Desktop\\Projet_fin_couple\\backend\\core\\WeCount.Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "centralPackageVersionsManagementEnabled": true,
         "configFilePaths": [
           "C:\\Users\\samir\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net9.0"
+          "net8.0"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net9.0": {
-            "targetAlias": "net9.0",
+          "net8.0": {
+            "targetAlias": "net8.0",
             "projectReferences": {}
           }
         },
@@ -179,8 +226,27 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net9.0": {
-          "targetAlias": "net9.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "centralPackageVersions": {
+            "coverlet.collector": "6.0.2",
+            "FluentAssertions": "7.0.0",
+            "FluentValidation": "11.12.0",
+            "FluentValidation.AspNetCore": "11.3.0",
+            "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.0",
+            "Microsoft.AspNetCore.OpenApi": "8.0.0",
+            "Microsoft.Extensions.Configuration": "9.0.0",
+            "Microsoft.Extensions.DependencyInjection": "9.0.0",
+            "Microsoft.Extensions.Options": "9.0.7",
+            "Microsoft.NET.Test.Sdk": "17.12.0",
+            "MongoDB.Driver": "3.4.0",
+            "Moq": "4.20.72",
+            "Serilog.AspNetCore": "8.0.4",
+            "Serilog.Sinks.Console": "6.0.0",
+            "Swashbuckle.AspNetCore": "8.0.0",
+            "xunit": "2.9.2",
+            "xunit.runner.visualstudio": "2.8.2"
+          },
           "imports": [
             "net461",
             "net462",
@@ -210,18 +276,19 @@
         "packagesPath": "C:\\Users\\samir\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\samir\\Desktop\\Projet_fin_couple\\backend\\core\\WeCount.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
+        "centralPackageVersionsManagementEnabled": true,
         "configFilePaths": [
           "C:\\Users\\samir\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net9.0"
+          "net8.0"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net9.0": {
-            "targetAlias": "net9.0",
+          "net8.0": {
+            "targetAlias": "net8.0",
             "projectReferences": {
               "C:\\Users\\samir\\Desktop\\Projet_fin_couple\\backend\\core\\WeCount.Domain\\WeCount.Domain.csproj": {
                 "projectPath": "C:\\Users\\samir\\Desktop\\Projet_fin_couple\\backend\\core\\WeCount.Domain\\WeCount.Domain.csproj"
@@ -242,17 +309,38 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net9.0": {
-          "targetAlias": "net9.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
           "dependencies": {
             "Microsoft.Extensions.Options": {
               "target": "Package",
-              "version": "[9.0.7, )"
+              "version": "[9.0.7, )",
+              "versionCentrallyManaged": true
             },
             "MongoDB.Driver": {
               "target": "Package",
-              "version": "[3.4.0, )"
+              "version": "[3.4.0, )",
+              "versionCentrallyManaged": true
             }
+          },
+          "centralPackageVersions": {
+            "coverlet.collector": "6.0.2",
+            "FluentAssertions": "7.0.0",
+            "FluentValidation": "11.12.0",
+            "FluentValidation.AspNetCore": "11.3.0",
+            "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.0",
+            "Microsoft.AspNetCore.OpenApi": "8.0.0",
+            "Microsoft.Extensions.Configuration": "9.0.0",
+            "Microsoft.Extensions.DependencyInjection": "9.0.0",
+            "Microsoft.Extensions.Options": "9.0.7",
+            "Microsoft.NET.Test.Sdk": "17.12.0",
+            "MongoDB.Driver": "3.4.0",
+            "Moq": "4.20.72",
+            "Serilog.AspNetCore": "8.0.4",
+            "Serilog.Sinks.Console": "6.0.0",
+            "Swashbuckle.AspNetCore": "8.0.0",
+            "xunit": "2.9.2",
+            "xunit.runner.visualstudio": "2.8.2"
           },
           "imports": [
             "net461",

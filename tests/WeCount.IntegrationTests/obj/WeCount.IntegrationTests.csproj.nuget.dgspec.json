@@ -13,6 +13,7 @@
         "packagesPath": "C:\\Users\\samir\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\samir\\Desktop\\Projet_fin_couple\\backend\\tests\\WeCount.IntegrationTests\\obj\\",
         "projectStyle": "PackageReference",
+        "centralPackageVersionsManagementEnabled": true,
         "configFilePaths": [
           "C:\\Users\\samir\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
@@ -46,20 +47,43 @@
           "dependencies": {
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
-              "version": "[17.12.0, )"
+              "version": "[17.12.0, )",
+              "versionCentrallyManaged": true
             },
             "coverlet.collector": {
               "target": "Package",
-              "version": "[6.0.2, )"
+              "version": "[6.0.2, )",
+              "versionCentrallyManaged": true
             },
             "xunit": {
               "target": "Package",
-              "version": "[2.9.2, )"
+              "version": "[2.9.2, )",
+              "versionCentrallyManaged": true
             },
             "xunit.runner.visualstudio": {
               "target": "Package",
-              "version": "[2.8.2, )"
+              "version": "[2.8.2, )",
+              "versionCentrallyManaged": true
             }
+          },
+          "centralPackageVersions": {
+            "coverlet.collector": "6.0.2",
+            "FluentAssertions": "7.0.0",
+            "FluentValidation": "11.12.0",
+            "FluentValidation.AspNetCore": "11.3.0",
+            "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.0",
+            "Microsoft.AspNetCore.OpenApi": "8.0.0",
+            "Microsoft.Extensions.Configuration": "9.0.0",
+            "Microsoft.Extensions.DependencyInjection": "9.0.0",
+            "Microsoft.Extensions.Options": "9.0.7",
+            "Microsoft.NET.Test.Sdk": "17.12.0",
+            "MongoDB.Driver": "3.4.0",
+            "Moq": "4.20.72",
+            "Serilog.AspNetCore": "8.0.4",
+            "Serilog.Sinks.Console": "6.0.0",
+            "Swashbuckle.AspNetCore": "8.0.0",
+            "xunit": "2.9.2",
+            "xunit.runner.visualstudio": "2.8.2"
           },
           "imports": [
             "net461",
