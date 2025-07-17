@@ -11,6 +11,7 @@ namespace WeCount.Domain.Entities
 
         [BsonElement("email")]
         public string Email { get; set; } = string.Empty;
+
         [BsonElement("firstName")]
         public string FirstName { get; set; } = string.Empty;
 

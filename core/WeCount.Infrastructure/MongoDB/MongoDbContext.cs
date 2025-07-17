@@ -17,5 +17,9 @@ public class MongoDbContext : IMongoDbContext
 
     public IMongoCollection<User> Users => _database.GetCollection<User>("Users");
     public IMongoCollection<Couple> Couples => _database.GetCollection<Couple>("Couples");
-    public IMongoCollection<Transaction> Transactions => _database.GetCollection<Transaction>("Transactions");
+    public IMongoCollection<Transaction> Transactions =>
+        _database.GetCollection<Transaction>("Transactions");
+    public IMongoCollection<Budget> Budgets => _database.GetCollection<Budget>("Budgets");
+    public IMongoCollection<Goal> Goals => _database.GetCollection<Goal>("Goals");
+    public IMongoCollection<Debt> Debts => _database.GetCollection<Debt>("Debts");
 }

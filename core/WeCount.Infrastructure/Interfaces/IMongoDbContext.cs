@@ -8,8 +8,8 @@ namespace WeCount.Infrastructure.Interfaces
         IMongoCollection<Transaction> Transactions { get; }
         IMongoCollection<User> Users { get; }
         IMongoCollection<Couple> Couples { get; }
-        // IMongoCollection<Budget> Budgets { get; }
-        // IMongoCollection<Goal> Goals { get; }
-        // IMongoCollection<Debt> Debts { get; }
+        IMongoCollection<Budget> Budgets { get; }
+        IMongoCollection<Goal> Goals { get; }
+        IMongoCollection<Debt> Debts { get; }
     }
 }
