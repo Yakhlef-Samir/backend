@@ -9,6 +9,9 @@ namespace WeCount.Domain.Entities
         [BsonRepresentation(BsonType.String)]
         public Guid Id { get; set; }
 
+        [BsonElement("userId")]
+        public Guid UserId { get; set; }
+
         [BsonElement("email")]
         public string Email { get; set; } = string.Empty;
 

@@ -1,19 +1,16 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
-
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
-
   <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" />
-  <PackageReference Include="Microsoft.AspNetCore.OpenApi" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" />
+    <PackageReference Include="MediatR" />
   </ItemGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\WeCount.Application\WeCount.Application.csproj" />
     <ProjectReference Include="..\WeCount.Infrastructure\WeCount.Infrastructure.csproj" />
   </ItemGroup>
-
 </Project>
