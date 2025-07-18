@@ -17,9 +17,6 @@ namespace WeCount.Application.Users.Commands
         public async Task<User?> Handle(
             GetUserByIdQuery request,
             CancellationToken cancellationToken
-        )
-        {
-            return await _userRepository.GetByIdAsync(request.UserId);
-        }
+        ) => await _userRepository.GetByIdAsync(request.UserId);
     }
 }

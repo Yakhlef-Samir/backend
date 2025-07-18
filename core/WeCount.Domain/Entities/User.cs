@@ -10,6 +10,7 @@ namespace WeCount.Domain.Entities
         public Guid Id { get; set; }
 
         [BsonElement("userId")]
+        [BsonRepresentation(BsonType.String)]
         public Guid UserId { get; set; }
 
         [BsonElement("email")]

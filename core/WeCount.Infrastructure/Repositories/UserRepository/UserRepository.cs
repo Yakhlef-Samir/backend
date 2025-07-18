@@ -12,15 +12,11 @@ namespace WeCount.Infrastructure.Repositories.UserRepository
     {
         private readonly IMongoCollection<User> _users = context.Users;
 
-        public async Task<User?> GetByIdAsync(Guid userId)
-        {
-            return await _users.Find(u => u.UserId == userId).FirstOrDefaultAsync();
-        }
+        public async Task<User?> GetByIdAsync(Guid userId) =>
+            await _users.Find(u => u.UserId == userId).FirstOrDefaultAsync();
 
-        public async Task<User?> GetByEmailAsync(string email)
-        {
-            return await _users.Find(u => u.Email == email).FirstOrDefaultAsync();
-        }
+        public async Task<User?> GetByEmailAsync(string email) =>
+            await _users.Find(u => u.Email == email).FirstOrDefaultAsync();
 
         public async Task<IEnumerable<User>> GetAllAsync(int page = 1, int pageSize = 20)
         {
@@ -49,9 +45,7 @@ namespace WeCount.Infrastructure.Repositories.UserRepository
             return result.DeletedCount > 0;
         }
 
-        public async Task<bool> ExistsByEmailAsync(string email)
-        {
-            return await _users.Find(u => u.Email == email).AnyAsync();
-        }
+        public async Task<bool> ExistsByEmailAsync(string email) =>
+            await _users.Find(u => u.Email == email).AnyAsync();
     }
 }
