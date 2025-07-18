@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>WeCount.Bootstrap</AssemblyName>
+    <RootNamespace>WeCount.Bootstrap</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" />
+    <PackageReference Include="MongoDB.Driver" />
+    <PackageReference Include="MediatR" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" />
+    <PackageReference Include="Microsoft.Extensions.Options" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" />
+  </ItemGroup>
+  <ItemGroup>
+    
+    <ProjectReference Include="..\WeCount.Infrastructure\WeCount.Infrastructure.csproj" />
+    <ProjectReference Include="..\WeCount.Application\WeCount.Application.csproj" />
+  </ItemGroup>
+</Project>

@@ -2,7 +2,9 @@ C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.Application\bin\De
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.Application\bin\Debug\net8.0\WeCount.Application.dll
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.Application\bin\Debug\net8.0\WeCount.Application.pdb
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.Application\bin\Debug\net8.0\WeCount.Domain.dll
+C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.Application\bin\Debug\net8.0\WeCount.Infrastructure.dll
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.Application\bin\Debug\net8.0\WeCount.Domain.pdb
+C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.Application\bin\Debug\net8.0\WeCount.Infrastructure.pdb
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.Application\obj\Debug\net8.0\WeCount.Application.csproj.AssemblyReference.cache
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.Application\obj\Debug\net8.0\WeCount.Application.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.Application\obj\Debug\net8.0\WeCount.Application.AssemblyInfoInputs.cache
@@ -14,5 +16,3 @@ C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.Application\obj\De
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.Application\obj\Debug\net8.0\refint\WeCount.Application.dll
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.Application\obj\Debug\net8.0\WeCount.Application.pdb
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.Application\obj\Debug\net8.0\ref\WeCount.Application.dll
-C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.Application\bin\Debug\net8.0\WeCount.Infrastructure.dll
-C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.Application\bin\Debug\net8.0\WeCount.Infrastructure.pdb
