@@ -1,3 +1,5 @@
+using Microsoft.Extensions.Options;
+using MongoDB.Driver;
 using WeCount.Infrastructure.MongoDB;
 
 namespace WeCount.API
@@ -16,7 +18,16 @@ namespace WeCount.API
             services.AddControllers();
             services.AddOptions();
             services.Configure<MongoDbSettings>(Configuration.GetSection("MongoDbSettings"));
-            services.AddSingleton<MongoDbContext>();
+            services.AddSingleton<IMongoClient>(sp =>
+            {
+                var opts = sp.GetRequiredService<IOptions<MongoDbSettings>>().Value;
+                return new MongoClient(opts.ConnectionString);
+            });
+            services.AddScoped(sp =>
+            {
+                var opts = sp.GetRequiredService<IOptions<MongoDbSettings>>().Value;
+                return sp.GetRequiredService<IMongoClient>().GetDatabase(opts.DatabaseName);
+            });
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
