@@ -1,6 +1,9 @@
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 using WeCount.Domain.Entities;
+using WeCount.Domain.Entities.Budget;
+using WeCount.Domain.Entities.Couple;
+using WeCount.Domain.Entities.Transaction;
 using WeCount.Infrastructure.Interfaces;
 
 namespace WeCount.Infrastructure.MongoDB;

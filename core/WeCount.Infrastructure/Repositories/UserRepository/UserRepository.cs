@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using MongoDB.Driver;
 using WeCount.Domain.Entities;
 using WeCount.Infrastructure.Interfaces;
@@ -12,8 +8,8 @@ namespace WeCount.Infrastructure.Repositories.UserRepository
     {
         private readonly IMongoCollection<User> _users = context.Users;
 
-        public async Task<User?> GetByIdAsync(Guid userId) =>
-            await _users.Find(u => u.UserId == userId).FirstOrDefaultAsync();
+        public async Task<User?> GetByIdAsync(Guid Id) =>
+            await _users.Find(u => u.Id == Id).FirstOrDefaultAsync();
 
         public async Task<User?> GetByEmailAsync(string email) =>
             await _users.Find(u => u.Email == email).FirstOrDefaultAsync();
@@ -39,9 +35,9 @@ namespace WeCount.Infrastructure.Repositories.UserRepository
             return user;
         }
 
-        public async Task<bool> DeleteAsync(Guid userId)
+        public async Task<bool> DeleteAsync(Guid Id)
         {
-            var result = await _users.DeleteOneAsync(u => u.Id == userId);
+            var result = await _users.DeleteOneAsync(u => u.Id == Id);
             return result.DeletedCount > 0;
         }
 

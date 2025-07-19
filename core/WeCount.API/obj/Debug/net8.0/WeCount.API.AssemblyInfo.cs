@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WeCount.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+574afe71ab9d874748969202cfb7ea00176d47b2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8e82e9a731d0b835158767e1e34f721457264d2a")]
 [assembly: System.Reflection.AssemblyProductAttribute("WeCount.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WeCount.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

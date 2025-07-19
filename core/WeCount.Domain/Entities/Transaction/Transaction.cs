@@ -1,15 +1,13 @@
-using MongoDB.Bson;
+using System;
 using MongoDB.Bson.Serialization.Attributes;
+using WeCount.Domain.Common;
 using WeCount.Domain.Enums;
+using WeCount.Domain.ValueObjects;
 
-namespace WeCount.Domain.Entities
+namespace WeCount.Domain.Entities.Transaction
 {
-    public class Transaction
+    public class Transaction : AuditableEntity
     {
-        [BsonId]
-        [BsonRepresentation(BsonType.String)]
-        public Guid Id { get; set; }
-
         [BsonElement("amount")]
         public decimal Amount { get; set; }
 
@@ -17,10 +15,10 @@ namespace WeCount.Domain.Entities
         public string Description { get; set; } = string.Empty;
 
         [BsonElement("category")]
-        public string Category { get; set; } = string.Empty;
+        public Category Category { get; set; } = new Category(string.Empty, string.Empty);
 
         [BsonElement("date")]
-        [BsonDateTimeOptions(Kind = System.DateTimeKind.Utc)]
+        [BsonDateTimeOptions(Kind = DateTimeKind.Utc)]
         public DateTime Date { get; set; }
 
         [BsonElement("userId")]
@@ -30,6 +28,6 @@ namespace WeCount.Domain.Entities
         public Guid CoupleId { get; set; }
 
         [BsonElement("type")]
-        public TransactionType Type { get; set; } // Income, Expense
+        public TransactionType Type { get; set; }
     }
 }

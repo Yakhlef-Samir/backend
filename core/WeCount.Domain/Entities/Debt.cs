@@ -1,13 +1,13 @@
 using MongoDB.Bson.Serialization.Attributes;
+using System;
+using WeCount.Domain.Common;
 using WeCount.Domain.Enums;
 
 namespace WeCount.Domain.Entities
 {
-    public class Debt
+    public class Debt : AuditableEntity
     {
-        [BsonId]
-        [BsonRepresentation(MongoDB.Bson.BsonType.String)]
-        public Guid Id { get; set; }
+        
 
         [BsonElement("title")]
         public string Title { get; set; } = string.Empty;

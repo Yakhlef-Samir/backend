@@ -1,14 +1,10 @@
-using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
+using WeCount.Domain.Common;
 
 namespace WeCount.Domain.Entities
 {
-    public class Goal
+    public class Goal : AuditableEntity
     {
-        [BsonId]
-        [BsonRepresentation(BsonType.String)]
-        public Guid Id { get; set; }
-
         [BsonElement("name")]
         public string Name { get; set; } = string.Empty;
 
@@ -19,7 +15,7 @@ namespace WeCount.Domain.Entities
         public decimal SavedAmount { get; set; }
 
         [BsonElement("deadline")]
-        [BsonDateTimeOptions(Kind = System.DateTimeKind.Utc)]
+        [BsonDateTimeOptions(Kind = DateTimeKind.Utc)]
         public DateTime Deadline { get; set; }
 
         [BsonElement("icon")]

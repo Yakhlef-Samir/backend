@@ -1,15 +1,12 @@
-using MongoDB.Bson;
+using System;
 using MongoDB.Bson.Serialization.Attributes;
+using WeCount.Domain.Common;
 using WeCount.Domain.Enums;
 
-namespace WeCount.Domain.Entities
+namespace WeCount.Domain.Entities.Couple
 {
-    public class CoupleUser
+    public class CoupleUser : AuditableEntity
     {
-        [BsonId]
-        [BsonRepresentation(BsonType.String)]
-        public Guid Id { get; set; }
-
         [BsonElement("userId")]
         public Guid UserId { get; set; }
 
@@ -23,11 +20,11 @@ namespace WeCount.Domain.Entities
         public bool IsCreator { get; set; }
 
         [BsonElement("invitationSentAt")]
-        [BsonDateTimeOptions(Kind = System.DateTimeKind.Utc)]
+        [BsonDateTimeOptions(Kind = DateTimeKind.Utc)]
         public DateTime InvitationSentAt { get; set; }
 
         [BsonElement("joinedAt")]
-        [BsonDateTimeOptions(Kind = System.DateTimeKind.Utc)]
+        [BsonDateTimeOptions(Kind = DateTimeKind.Utc)]
         public DateTime? JoinedAt { get; set; }
 
         [BsonElement("status")]

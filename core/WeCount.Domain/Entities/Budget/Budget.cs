@@ -1,16 +1,14 @@
-using MongoDB.Bson;
+using System;
 using MongoDB.Bson.Serialization.Attributes;
+using WeCount.Domain.Common;
+using WeCount.Domain.ValueObjects;
 
-namespace WeCount.Domain.Entities
+namespace WeCount.Domain.Entities.Budget
 {
-    public class Budget
+    public class Budget : AuditableEntity
     {
-        [BsonId]
-        [BsonRepresentation(BsonType.String)]
-        public Guid Id { get; set; }
-
         [BsonElement("category")]
-        public string Category { get; set; } = string.Empty;
+        public Category Category { get; set; } = new Category(string.Empty, string.Empty);
 
         [BsonElement("amount")]
         public decimal Amount { get; set; }
@@ -19,11 +17,11 @@ namespace WeCount.Domain.Entities
         public decimal Spent { get; set; }
 
         [BsonElement("startDate")]
-        [BsonDateTimeOptions(Kind = System.DateTimeKind.Utc)]
+        [BsonDateTimeOptions(Kind = DateTimeKind.Utc)]
         public DateTime StartDate { get; set; }
 
         [BsonElement("endDate")]
-        [BsonDateTimeOptions(Kind = System.DateTimeKind.Utc)]
+        [BsonDateTimeOptions(Kind = DateTimeKind.Utc)]
         public DateTime EndDate { get; set; }
 
         [BsonElement("coupleId")]
