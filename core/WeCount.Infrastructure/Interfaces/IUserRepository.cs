@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using WeCount.Domain.Entities;
 
-namespace WeCount.Infrastructure.Repositories.UserRepository
+namespace WeCount.Infrastructure.Interfaces
 {
     public interface IUserRepository
     {

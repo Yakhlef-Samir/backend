@@ -9,6 +9,11 @@ using MongoDB.Driver;
 using WeCount.Application.Users.Commands;
 using WeCount.Infrastructure.Interfaces;
 using WeCount.Infrastructure.MongoDB;
+using WeCount.Infrastructure.Repositories.BudgetRepository;
+using WeCount.Infrastructure.Repositories.CoupleRepository;
+using WeCount.Infrastructure.Repositories.DebtRepository;
+using WeCount.Infrastructure.Repositories.GoalRepository;
+using WeCount.Infrastructure.Repositories.TransactionRepository;
 using WeCount.Infrastructure.Repositories.UserRepository;
 
 namespace WeCount.Bootstrap
@@ -39,6 +44,11 @@ namespace WeCount.Bootstrap
 
             //** Repository
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<ICoupleRepository, CoupleRepository>();
+            services.AddScoped<IBudgetRepository, BudgetRepository>();
+            services.AddScoped<IDebtRepository, DebtRepository>();
+            services.AddScoped<IGoalRepository, GoalRepository>();
+            services.AddScoped<ITransactionRepository, TransactionRepository>();
 
             //** MediatR handlers
             services.AddMediatR(typeof(CreateUserCommand).Assembly);
