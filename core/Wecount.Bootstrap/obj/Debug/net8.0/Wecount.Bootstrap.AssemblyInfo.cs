@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WeCount.Bootstrap")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f8341f5c8e90d3568bfd72cf70ca1fed12a39272")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+574afe71ab9d874748969202cfb7ea00176d47b2")]
 [assembly: System.Reflection.AssemblyProductAttribute("WeCount.Bootstrap")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WeCount.Bootstrap")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
