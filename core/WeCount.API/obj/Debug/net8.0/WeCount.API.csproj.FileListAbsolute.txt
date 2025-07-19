@@ -16,10 +16,10 @@ C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8.0\WeCount.API.dll
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8.0\WeCount.API.pdb
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8.0\DnsClient.dll
+C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8.0\MediatR.dll
+C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8.0\MediatR.Contracts.dll
+C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll
-C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
-C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8.0\Microsoft.OpenApi.dll
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8.0\MongoDB.Bson.dll
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8.0\MongoDB.Driver.dll
@@ -30,10 +30,12 @@ C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8.0\ZstdSharp.dll
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8.0\WeCount.Application.dll
+C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8.0\WeCount.Bootstrap.dll
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8.0\WeCount.Domain.dll
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8.0\WeCount.Infrastructure.dll
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8.0\WeCount.Application.pdb
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8.0\WeCount.Infrastructure.pdb
+C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8.0\WeCount.Bootstrap.pdb
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8.0\WeCount.Domain.pdb
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\obj\Debug\net8.0\rjimswa.dswa.cache.json
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
@@ -49,6 +51,3 @@ C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\obj\Debug\net8
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\obj\Debug\net8.0\WeCount.API.pdb
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\obj\Debug\net8.0\WeCount.API.genruntimeconfig.cache
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\obj\Debug\net8.0\ref\WeCount.API.dll
-C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8.0\MediatR.dll
-C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8.0\MediatR.Contracts.dll
-C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8.0\MediatR.Extensions.Microsoft.DependencyInjection.dll

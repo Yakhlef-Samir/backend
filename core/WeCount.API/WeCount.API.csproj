@@ -14,5 +14,6 @@
   <ItemGroup>
     <ProjectReference Include="..\WeCount.Application\WeCount.Application.csproj" />
     <ProjectReference Include="..\WeCount.Infrastructure\WeCount.Infrastructure.csproj" />
+    <ProjectReference Include="..\Wecount.Bootstrap\Wecount.Bootstrap.csproj" />
   </ItemGroup>
 </Project>
