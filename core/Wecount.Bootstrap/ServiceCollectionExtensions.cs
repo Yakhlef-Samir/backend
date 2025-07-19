@@ -20,7 +20,7 @@ namespace WeCount.Bootstrap
             IConfiguration config
         )
         {
-            // Web API services
+            //** Web API services
             services.AddControllers();
             services.AddEndpointsApiExplorer();
             services.AddSwaggerGen(c =>
@@ -34,8 +34,10 @@ namespace WeCount.Bootstrap
                 config["MongoDbSettings:ConnectionString"]
             ));
 
-            //** Context & repository
+            //** Context
             services.AddScoped<IMongoDbContext, MongoDbContext>();
+
+            //** Repository
             services.AddScoped<IUserRepository, UserRepository>();
 
             //** MediatR handlers
