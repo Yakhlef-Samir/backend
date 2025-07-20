@@ -1,7 +1,8 @@
 using MongoDB.Driver;
+using WeCount.Application.Common.Interfaces;
+using WeCount.Application.Common.Interfaces.Repositories;
 using WeCount.Domain.Entities;
 using WeCount.Infrastructure.Common; // pagination extensions
-using WeCount.Infrastructure.Interfaces;
 
 namespace WeCount.Infrastructure.Repositories.DebtRepository
 {

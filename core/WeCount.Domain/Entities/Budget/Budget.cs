@@ -26,5 +26,8 @@ namespace WeCount.Domain.Entities.Budget
 
         [BsonElement("coupleId")]
         public Guid CoupleId { get; set; }
+
+        [BsonElement("name")]
+        public string Name { get; set; } = string.Empty;
     }
 }

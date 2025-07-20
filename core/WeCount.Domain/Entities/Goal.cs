@@ -23,5 +23,11 @@ namespace WeCount.Domain.Entities
 
         [BsonElement("coupleId")]
         public Guid CoupleId { get; set; }
+
+        [BsonElement("priority")]
+        public int Priority { get; set; }
+
+        [BsonIgnore]
+        public bool IsCompleted => SavedAmount >= TargetAmount;
     }
 }

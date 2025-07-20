@@ -13,6 +13,10 @@ C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8.0\MediatR.Contracts.dll
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8.0\Microsoft.OpenApi.dll
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8.0\MongoDB.Bson.dll
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8.0\MongoDB.Driver.dll
@@ -21,6 +25,7 @@ C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8.0\ZstdSharp.dll
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8.0\WeCount.Application.dll
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8.0\WeCount.Bootstrap.dll

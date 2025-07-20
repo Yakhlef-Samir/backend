@@ -6,20 +6,24 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using MongoDB.Driver;
+using WeCount.Application.Common.Interfaces;
 using WeCount.Application.Common.Mapping;
 using WeCount.Application.Users.Commands;
 using WeCount.Domain.Entities;
 using WeCount.Domain.Entities.Budget;
 using WeCount.Domain.Entities.Couple;
 using WeCount.Domain.Entities.Transaction;
-using WeCount.Infrastructure.Interfaces;
+using WeCount.Application.Common.Interfaces.Repositories;
 using WeCount.Infrastructure.MongoDB;
 using WeCount.Infrastructure.Repositories.BudgetRepository;
 using WeCount.Infrastructure.Repositories.CoupleRepository;
 using WeCount.Infrastructure.Repositories.DebtRepository;
 using WeCount.Infrastructure.Repositories.GoalRepository;
+using WeCount.Infrastructure.Repositories.TransactionCategoryRepository;
 using WeCount.Infrastructure.Repositories.TransactionRepository;
 using WeCount.Infrastructure.Repositories.UserRepository;
+
+using WeCount.Infrastructure.Services;
 
 namespace WeCount.Bootstrap
 {
@@ -54,7 +58,9 @@ namespace WeCount.Bootstrap
             services.AddScoped<IDebtRepository, DebtRepository>();
             services.AddScoped<IGoalRepository, GoalRepository>();
             services.AddScoped<ITransactionRepository, TransactionRepository>();
-
+            services.AddScoped<ITransactionCategoryRepository, TransactionCategoryRepository>();
+            services.AddScoped<IPasswordHasher, PasswordHasher>();
+            services.AddScoped<ITokenService, TokenService>();
             // Collections MongoDB pour handlers
             services.AddScoped<IMongoCollection<User>>(sp =>
                 sp.GetRequiredService<IMongoDbContext>().Users
@@ -64,6 +70,9 @@ namespace WeCount.Bootstrap
             );
             services.AddScoped<IMongoCollection<Transaction>>(sp =>
                 sp.GetRequiredService<IMongoDbContext>().Transactions
+            );
+            services.AddScoped<IMongoCollection<TransactionCategory>>(sp =>
+                sp.GetRequiredService<IMongoDbContext>().TransactionCategories
             );
             services.AddScoped<IMongoCollection<Budget>>(sp =>
                 sp.GetRequiredService<IMongoDbContext>().Budgets

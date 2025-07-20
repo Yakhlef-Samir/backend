@@ -8,9 +8,11 @@ using MongoDB.Bson.Serialization.Serializers;
 using MongoDB.Driver;
 using WeCount.Domain.Entities;
 using WeCount.Domain.Entities.Budget;
-using WeCount.Domain.Entities.Couple;
 using WeCount.Domain.Entities.Transaction;
-using WeCount.Infrastructure.Interfaces;
+using CoupleEntity = WeCount.Domain.Entities.Couple.Couple;
+using GoalEntity = WeCount.Domain.Entities.Goal;
+using DebtEntity = WeCount.Domain.Entities.Debt;
+using WeCount.Application.Common.Interfaces;
 
 namespace WeCount.Infrastructure.MongoDB;
 
@@ -30,10 +32,14 @@ public class MongoDbContext : IMongoDbContext
     }
 
     public IMongoCollection<User> Users => _database.GetCollection<User>("Users");
-    public IMongoCollection<Couple> Couples => _database.GetCollection<Couple>("Couples");
+    public IMongoCollection<CoupleEntity> Couples => _database.GetCollection<CoupleEntity>("Couples");
     public IMongoCollection<Transaction> Transactions =>
         _database.GetCollection<Transaction>("Transactions");
     public IMongoCollection<Budget> Budgets => _database.GetCollection<Budget>("Budgets");
-    public IMongoCollection<Goal> Goals => _database.GetCollection<Goal>("Goals");
-    public IMongoCollection<Debt> Debts => _database.GetCollection<Debt>("Debts");
+    public IMongoCollection<GoalEntity> Goals => _database.GetCollection<GoalEntity>("Goals");
+    public IMongoCollection<DebtEntity> Debts => _database.GetCollection<DebtEntity>("Debts");
+    public IMongoCollection<WeCount.Domain.Entities.Couple.CoupleScoreHistoryItem> CoupleScores =>
+        _database.GetCollection<WeCount.Domain.Entities.Couple.CoupleScoreHistoryItem>("CoupleScores");
+    public IMongoCollection<TransactionCategory> TransactionCategories =>
+        _database.GetCollection<TransactionCategory>("TransactionCategories");
 }

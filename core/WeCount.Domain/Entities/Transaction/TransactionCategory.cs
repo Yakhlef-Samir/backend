@@ -10,5 +10,11 @@ namespace WeCount.Domain.Entities.Transaction
 
         [BsonElement("label")]
         public string Label { get; set; } = string.Empty;
+
+        [BsonElement("icon")]
+        public string Icon { get; set; } = string.Empty;
+
+        [BsonElement("color")]
+        public string Color { get; set; } = string.Empty;
     }
 }

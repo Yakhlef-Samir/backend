@@ -5,5 +5,6 @@ namespace WeCount.Domain.Enums
         Active,
         Paid,
         Late,
+        Completed,
     }
 }

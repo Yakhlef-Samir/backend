@@ -86,10 +86,12 @@
             "MediatR": "11.1.0",
             "MediatR.Extensions.Microsoft.DependencyInjection": "11.1.0",
             "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.0",
+            "Microsoft.AspNetCore.Cryptography.KeyDerivation": "8.0.0",
             "Microsoft.AspNetCore.OpenApi": "8.0.0",
             "Microsoft.Extensions.Configuration": "8.0.0",
             "Microsoft.Extensions.DependencyInjection": "8.0.0",
             "Microsoft.Extensions.Options": "8.0.0",
+            "Microsoft.IdentityModel.Tokens": "7.0.3",
             "Microsoft.NET.Test.Sdk": "17.12.0",
             "MongoDB.Bson": "2.23.1",
             "MongoDB.Driver": "3.4.0",
@@ -97,6 +99,7 @@
             "Serilog.AspNetCore": "8.0.4",
             "Serilog.Sinks.Console": "6.0.0",
             "Swashbuckle.AspNetCore": "8.0.0",
+            "System.IdentityModel.Tokens.Jwt": "7.0.3",
             "xunit": "2.9.2",
             "xunit.runner.visualstudio": "2.8.2"
           },
@@ -148,9 +151,6 @@
             "projectReferences": {
               "C:\\Users\\samir\\Desktop\\Projet_fin_couple\\backend\\core\\WeCount.Domain\\WeCount.Domain.csproj": {
                 "projectPath": "C:\\Users\\samir\\Desktop\\Projet_fin_couple\\backend\\core\\WeCount.Domain\\WeCount.Domain.csproj"
-              },
-              "C:\\Users\\samir\\Desktop\\Projet_fin_couple\\backend\\core\\WeCount.Infrastructure\\WeCount.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\samir\\Desktop\\Projet_fin_couple\\backend\\core\\WeCount.Infrastructure\\WeCount.Infrastructure.csproj"
               }
             }
           }
@@ -190,6 +190,11 @@
               "target": "Package",
               "version": "[11.1.0, )",
               "versionCentrallyManaged": true
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[3.4.0, )",
+              "versionCentrallyManaged": true
             }
           },
           "centralPackageVersions": {
@@ -202,10 +207,12 @@
             "MediatR": "11.1.0",
             "MediatR.Extensions.Microsoft.DependencyInjection": "11.1.0",
             "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.0",
+            "Microsoft.AspNetCore.Cryptography.KeyDerivation": "8.0.0",
             "Microsoft.AspNetCore.OpenApi": "8.0.0",
             "Microsoft.Extensions.Configuration": "8.0.0",
             "Microsoft.Extensions.DependencyInjection": "8.0.0",
             "Microsoft.Extensions.Options": "8.0.0",
+            "Microsoft.IdentityModel.Tokens": "7.0.3",
             "Microsoft.NET.Test.Sdk": "17.12.0",
             "MongoDB.Bson": "2.23.1",
             "MongoDB.Driver": "3.4.0",
@@ -213,6 +220,7 @@
             "Serilog.AspNetCore": "8.0.4",
             "Serilog.Sinks.Console": "6.0.0",
             "Swashbuckle.AspNetCore": "8.0.0",
+            "System.IdentityModel.Tokens.Jwt": "7.0.3",
             "xunit": "2.9.2",
             "xunit.runner.visualstudio": "2.8.2"
           },
@@ -345,10 +353,12 @@
             "MediatR": "11.1.0",
             "MediatR.Extensions.Microsoft.DependencyInjection": "11.1.0",
             "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.0",
+            "Microsoft.AspNetCore.Cryptography.KeyDerivation": "8.0.0",
             "Microsoft.AspNetCore.OpenApi": "8.0.0",
             "Microsoft.Extensions.Configuration": "8.0.0",
             "Microsoft.Extensions.DependencyInjection": "8.0.0",
             "Microsoft.Extensions.Options": "8.0.0",
+            "Microsoft.IdentityModel.Tokens": "7.0.3",
             "Microsoft.NET.Test.Sdk": "17.12.0",
             "MongoDB.Bson": "2.23.1",
             "MongoDB.Driver": "3.4.0",
@@ -356,6 +366,7 @@
             "Serilog.AspNetCore": "8.0.4",
             "Serilog.Sinks.Console": "6.0.0",
             "Swashbuckle.AspNetCore": "8.0.0",
+            "System.IdentityModel.Tokens.Jwt": "7.0.3",
             "xunit": "2.9.2",
             "xunit.runner.visualstudio": "2.8.2"
           },
@@ -436,10 +447,12 @@
             "MediatR": "11.1.0",
             "MediatR.Extensions.Microsoft.DependencyInjection": "11.1.0",
             "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.0",
+            "Microsoft.AspNetCore.Cryptography.KeyDerivation": "8.0.0",
             "Microsoft.AspNetCore.OpenApi": "8.0.0",
             "Microsoft.Extensions.Configuration": "8.0.0",
             "Microsoft.Extensions.DependencyInjection": "8.0.0",
             "Microsoft.Extensions.Options": "8.0.0",
+            "Microsoft.IdentityModel.Tokens": "7.0.3",
             "Microsoft.NET.Test.Sdk": "17.12.0",
             "MongoDB.Bson": "2.23.1",
             "MongoDB.Driver": "3.4.0",
@@ -447,6 +460,7 @@
             "Serilog.AspNetCore": "8.0.4",
             "Serilog.Sinks.Console": "6.0.0",
             "Swashbuckle.AspNetCore": "8.0.0",
+            "System.IdentityModel.Tokens.Jwt": "7.0.3",
             "xunit": "2.9.2",
             "xunit.runner.visualstudio": "2.8.2"
           },
@@ -493,6 +507,9 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+              "C:\\Users\\samir\\Desktop\\Projet_fin_couple\\backend\\core\\WeCount.Application\\WeCount.Application.csproj": {
+                "projectPath": "C:\\Users\\samir\\Desktop\\Projet_fin_couple\\backend\\core\\WeCount.Application\\WeCount.Application.csproj"
+              },
               "C:\\Users\\samir\\Desktop\\Projet_fin_couple\\backend\\core\\WeCount.Domain\\WeCount.Domain.csproj": {
                 "projectPath": "C:\\Users\\samir\\Desktop\\Projet_fin_couple\\backend\\core\\WeCount.Domain\\WeCount.Domain.csproj"
               }
@@ -515,14 +532,29 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Cryptography.KeyDerivation": {
+              "target": "Package",
+              "version": "[8.0.0, )",
+              "versionCentrallyManaged": true
+            },
             "Microsoft.Extensions.Options": {
               "target": "Package",
               "version": "[8.0.0, )",
               "versionCentrallyManaged": true
             },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[7.0.3, )",
+              "versionCentrallyManaged": true
+            },
             "MongoDB.Driver": {
               "target": "Package",
               "version": "[3.4.0, )",
+              "versionCentrallyManaged": true
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[7.0.3, )",
               "versionCentrallyManaged": true
             }
           },
@@ -536,10 +568,12 @@
             "MediatR": "11.1.0",
             "MediatR.Extensions.Microsoft.DependencyInjection": "11.1.0",
             "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.0",
+            "Microsoft.AspNetCore.Cryptography.KeyDerivation": "8.0.0",
             "Microsoft.AspNetCore.OpenApi": "8.0.0",
             "Microsoft.Extensions.Configuration": "8.0.0",
             "Microsoft.Extensions.DependencyInjection": "8.0.0",
             "Microsoft.Extensions.Options": "8.0.0",
+            "Microsoft.IdentityModel.Tokens": "7.0.3",
             "Microsoft.NET.Test.Sdk": "17.12.0",
             "MongoDB.Bson": "2.23.1",
             "MongoDB.Driver": "3.4.0",
@@ -547,6 +581,7 @@
             "Serilog.AspNetCore": "8.0.4",
             "Serilog.Sinks.Console": "6.0.0",
             "Swashbuckle.AspNetCore": "8.0.0",
+            "System.IdentityModel.Tokens.Jwt": "7.0.3",
             "xunit": "2.9.2",
             "xunit.runner.visualstudio": "2.8.2"
           },

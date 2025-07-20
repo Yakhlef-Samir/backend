@@ -9,6 +9,9 @@ namespace WeCount.Domain.Entities
         [BsonElement("email")]
         public string Email { get; set; } = string.Empty;
 
+        [BsonElement("passwordHash")]
+        public string PasswordHash { get; set; } = string.Empty;
+
         [BsonElement("avatar")]
         public string Avatar { get; set; } = string.Empty;
 

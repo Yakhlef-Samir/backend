@@ -1,7 +1,8 @@
 using MongoDB.Driver;
 using WeCount.Domain.Entities;
 using WeCount.Infrastructure.Common;
-using WeCount.Infrastructure.Interfaces;
+using WeCount.Application.Common.Interfaces.Repositories;
+using WeCount.Application.Common.Interfaces;
 
 namespace WeCount.Infrastructure.Repositories.UserRepository
 {

@@ -24,10 +24,16 @@ namespace WeCount.Domain.Entities.Transaction
         [BsonElement("userId")]
         public Guid UserId { get; set; }
 
+        [BsonElement("userName")]
+        public string UserName { get; set; } = string.Empty;
+
         [BsonElement("coupleId")]
-        public Guid CoupleId { get; set; }
+        public Guid? CoupleId { get; set; }
 
         [BsonElement("type")]
         public TransactionType Type { get; set; }
+
+        [BsonElement("isShared")]
+        public bool IsShared { get; set; }
     }
 }

@@ -7,6 +7,10 @@ namespace WeCount.Application.DTOs.Budget
         decimal Spent,
         DateTime StartDate,
         DateTime EndDate,
-        Guid CoupleId
+        Guid CoupleId,
+        decimal Limit,
+        string Icon,
+        string Color,
+        string Name
     );
 }

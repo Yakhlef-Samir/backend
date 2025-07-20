@@ -7,6 +7,8 @@ namespace WeCount.Application.DTOs
         decimal SavedAmount,
         DateTime Deadline,
         string Icon,
-        Guid CoupleId
+        Guid CoupleId,
+        bool IsCompleted,
+        int Priority
     );
 }

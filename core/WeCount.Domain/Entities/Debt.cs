@@ -1,5 +1,5 @@
-using MongoDB.Bson.Serialization.Attributes;
 using System;
+using MongoDB.Bson.Serialization.Attributes;
 using WeCount.Domain.Common;
 using WeCount.Domain.Enums;
 
@@ -7,8 +7,6 @@ namespace WeCount.Domain.Entities
 {
     public class Debt : AuditableEntity
     {
-        
-
         [BsonElement("title")]
         public string Title { get; set; } = string.Empty;
 
