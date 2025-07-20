@@ -1,6 +1,6 @@
 using MediatR;
 using WeCount.Domain.Entities;
-using WeCount.Infrastructure.Repositories.UserRepository;
+using WeCount.Infrastructure.Interfaces;
 
 namespace WeCount.Application.Users.Commands
 {

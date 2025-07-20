@@ -1,4 +1,3 @@
-using System;
 using WeCount.Domain.Enums;
 
 namespace WeCount.Application.DTOs

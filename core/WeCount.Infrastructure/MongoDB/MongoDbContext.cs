@@ -1,4 +1,10 @@
+using System.Net.Security;
+using System.Security.Authentication;
+using System.Security.Cryptography.X509Certificates;
 using Microsoft.Extensions.Options;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization;
+using MongoDB.Bson.Serialization.Serializers;
 using MongoDB.Driver;
 using WeCount.Domain.Entities;
 using WeCount.Domain.Entities.Budget;
@@ -11,6 +17,11 @@ namespace WeCount.Infrastructure.MongoDB;
 public class MongoDbContext : IMongoDbContext
 {
     private readonly IMongoDatabase _database;
+
+    static MongoDbContext()
+    {
+        BsonSerializer.RegisterSerializer(new GuidSerializer(GuidRepresentation.Standard));
+    }
 
     public MongoDbContext(IOptions<MongoDbSettings> settings)
     {

@@ -77,6 +77,8 @@
             }
           },
           "centralPackageVersions": {
+            "AutoMapper": "12.0.1",
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
             "coverlet.collector": "6.0.2",
             "FluentAssertions": "7.0.0",
             "FluentValidation": "11.12.0",
@@ -169,6 +171,16 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )",
+              "versionCentrallyManaged": true
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )",
+              "versionCentrallyManaged": true
+            },
             "MediatR": {
               "target": "Package",
               "version": "[11.1.0, )",
@@ -181,6 +193,8 @@
             }
           },
           "centralPackageVersions": {
+            "AutoMapper": "12.0.1",
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
             "coverlet.collector": "6.0.2",
             "FluentAssertions": "7.0.0",
             "FluentValidation": "11.12.0",
@@ -270,6 +284,16 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )",
+              "versionCentrallyManaged": true
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )",
+              "versionCentrallyManaged": true
+            },
             "MediatR": {
               "target": "Package",
               "version": "[11.1.0, )",
@@ -312,6 +336,8 @@
             }
           },
           "centralPackageVersions": {
+            "AutoMapper": "12.0.1",
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
             "coverlet.collector": "6.0.2",
             "FluentAssertions": "7.0.0",
             "FluentValidation": "11.12.0",
@@ -401,6 +427,8 @@
             }
           },
           "centralPackageVersions": {
+            "AutoMapper": "12.0.1",
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
             "coverlet.collector": "6.0.2",
             "FluentAssertions": "7.0.0",
             "FluentValidation": "11.12.0",
@@ -499,6 +527,8 @@
             }
           },
           "centralPackageVersions": {
+            "AutoMapper": "12.0.1",
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
             "coverlet.collector": "6.0.2",
             "FluentAssertions": "7.0.0",
             "FluentValidation": "11.12.0",

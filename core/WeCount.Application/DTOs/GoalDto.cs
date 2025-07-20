@@ -1,5 +1,3 @@
-using System;
-
 namespace WeCount.Application.DTOs
 {
     public record GoalDto(

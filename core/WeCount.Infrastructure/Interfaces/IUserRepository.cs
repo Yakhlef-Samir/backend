@@ -12,7 +12,7 @@ namespace WeCount.Infrastructure.Interfaces
         Task<User?> GetByEmailAsync(string email);
         Task<IEnumerable<User>> GetAllAsync(int page = 1, int pageSize = 20);
         Task<User> CreateAsync(User user);
-        Task<User> UpdateAsync(User user);
+        Task<bool> UpdateAsync(User user);
         Task<bool> DeleteAsync(Guid Id);
         Task<bool> ExistsByEmailAsync(string email);
     }

@@ -1,12 +1,3 @@
-C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\obj\Debug\net8.0\WeCount.API.csproj.AssemblyReference.cache
-C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\obj\Debug\net8.0\rpswa.dswa.cache.json
-C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\obj\Debug\net8.0\WeCount.API.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\obj\Debug\net8.0\WeCount.API.AssemblyInfoInputs.cache
-C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\obj\Debug\net8.0\WeCount.API.AssemblyInfo.cs
-C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\obj\Debug\net8.0\WeCount.API.csproj.CoreCompileInputs.cache
-C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\obj\Debug\net8.0\WeCount.API.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\obj\Debug\net8.0\WeCount.API.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\obj\Debug\net8.0\WeCount.API.sourcelink.json
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8.0\appsettings.json
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8.0\WeCount.API.staticwebassets.endpoints.json
@@ -15,6 +6,8 @@ C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8.0\WeCount.API.runtimeconfig.json
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8.0\WeCount.API.dll
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8.0\WeCount.API.pdb
+C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8.0\AutoMapper.dll
+C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8.0\DnsClient.dll
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8.0\MediatR.dll
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8.0\MediatR.Contracts.dll
@@ -37,6 +30,15 @@ C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8.0\WeCount.Infrastructure.pdb
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8.0\WeCount.Bootstrap.pdb
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\bin\Debug\net8.0\WeCount.Domain.pdb
+C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\obj\Debug\net8.0\WeCount.API.csproj.AssemblyReference.cache
+C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\obj\Debug\net8.0\WeCount.API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\obj\Debug\net8.0\WeCount.API.AssemblyInfoInputs.cache
+C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\obj\Debug\net8.0\WeCount.API.AssemblyInfo.cs
+C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\obj\Debug\net8.0\WeCount.API.csproj.CoreCompileInputs.cache
+C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\obj\Debug\net8.0\WeCount.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\obj\Debug\net8.0\WeCount.API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\obj\Debug\net8.0\WeCount.API.sourcelink.json
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\obj\Debug\net8.0\rjimswa.dswa.cache.json
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\WeCount.API\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json

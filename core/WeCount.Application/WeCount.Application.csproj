@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <ItemGroup>
     <ProjectReference Include="..\WeCount.Domain\WeCount.Domain.csproj" />
     <ProjectReference Include="..\WeCount.Infrastructure\WeCount.Infrastructure.csproj" />
@@ -11,5 +11,7 @@
   <ItemGroup>
     <PackageReference Include="MediatR" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" />
+    <PackageReference Include="AutoMapper" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" />
   </ItemGroup>
 </Project>
