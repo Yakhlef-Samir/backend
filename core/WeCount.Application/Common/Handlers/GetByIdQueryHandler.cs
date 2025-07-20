@@ -31,7 +31,7 @@ namespace WeCount.Application.Common.Handlers
             var entity = await request
                 .Collection.Find(e => e.Id == request.Id)
                 .FirstOrDefaultAsync(cancellationToken);
-            return entity == null ? default : request.Map(entity);
+            return entity is null ? default : request.Map(entity);
         }
     }
 }
