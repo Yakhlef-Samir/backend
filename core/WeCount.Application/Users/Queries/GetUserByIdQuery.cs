@@ -1,7 +1,10 @@
 using MediatR;
-using WeCount.Domain.Entities;
+using WeCount.Application.DTOs;
 
 namespace WeCount.Application.Users.Queries
 {
-    public record GetUserByIdQuery(Guid UserId) : IRequest<User?>;
+    public class GetUserByIdQuery(Guid id) : IRequest<UserDto?>
+    {
+        public Guid Id { get; } = id;
+    }
 }

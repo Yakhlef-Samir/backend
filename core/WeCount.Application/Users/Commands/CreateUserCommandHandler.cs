@@ -1,7 +1,6 @@
 using MediatR;
-using WeCount.Application.Users.Commands;
 using WeCount.Domain.Entities;
-using WeCount.Infrastructure.Repositories.UserRepository;
+using WeCount.Infrastructure.Interfaces;
 
 namespace WeCount.Application.Users.Commands
 {
@@ -23,10 +22,15 @@ namespace WeCount.Application.Users.Commands
             var user = new User
             {
                 Id = newId,
-                UserId = newId,
+                Name = request.Name,
                 Email = request.Email,
-                FirstName = request.Name,
-                LastName = string.Empty,
+                Avatar = request.Avatar,
+                PhoneNumber = request.PhoneNumber,
+                Address = request.Address,
+                City = request.City,
+                ZipCode = request.ZipCode,
+                Country = request.Country,
+                CoupleId = request.CoupleId,
                 CreatedAt = DateTime.UtcNow,
                 UpdatedAt = DateTime.UtcNow,
             };

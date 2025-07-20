@@ -1,5 +1,8 @@
 using MongoDB.Driver;
 using WeCount.Domain.Entities;
+using WeCount.Domain.Entities.Budget;
+using WeCount.Domain.Entities.Couple;
+using WeCount.Domain.Entities.Transaction;
 
 namespace WeCount.Infrastructure.Interfaces
 {

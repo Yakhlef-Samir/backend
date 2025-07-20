@@ -1,36 +1,36 @@
-using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
+using WeCount.Domain.Common;
+using WeCount.Domain.ValueObjects;
 
 namespace WeCount.Domain.Entities
 {
-    public class User
+    public class User : AuditableEntity
     {
-        [BsonId]
-        [BsonRepresentation(BsonType.String)]
-        public Guid Id { get; set; }
-
-        [BsonElement("userId")]
-        [BsonRepresentation(BsonType.String)]
-        public Guid UserId { get; set; }
-
         [BsonElement("email")]
         public string Email { get; set; } = string.Empty;
-
-        [BsonElement("firstName")]
-        public string FirstName { get; set; } = string.Empty;
-
-        [BsonElement("lastName")]
-        public string LastName { get; set; } = string.Empty;
 
         [BsonElement("avatar")]
         public string Avatar { get; set; } = string.Empty;
 
-        [BsonElement("createdAt")]
-        [BsonDateTimeOptions(Kind = DateTimeKind.Utc)]
-        public DateTime CreatedAt { get; set; }
+        [BsonElement("name")]
+        public FullName Name { get; set; } = new FullName(string.Empty, string.Empty);
 
-        [BsonElement("updatedAt")]
-        [BsonDateTimeOptions(Kind = DateTimeKind.Utc)]
-        public DateTime UpdatedAt { get; set; }
+        [BsonElement("phoneNumber")]
+        public string? PhoneNumber { get; set; }
+
+        [BsonElement("address")]
+        public string? Address { get; set; }
+
+        [BsonElement("city")]
+        public string? City { get; set; }
+
+        [BsonElement("zipCode")]
+        public string? ZipCode { get; set; }
+
+        [BsonElement("country")]
+        public string? Country { get; set; }
+
+        [BsonElement("coupleId")]
+        public Guid CoupleId { get; set; }
     }
 }

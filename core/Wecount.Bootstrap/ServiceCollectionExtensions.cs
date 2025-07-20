@@ -6,9 +6,19 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using MongoDB.Driver;
+using WeCount.Application.Common.Mapping;
 using WeCount.Application.Users.Commands;
+using WeCount.Domain.Entities;
+using WeCount.Domain.Entities.Budget;
+using WeCount.Domain.Entities.Couple;
+using WeCount.Domain.Entities.Transaction;
 using WeCount.Infrastructure.Interfaces;
 using WeCount.Infrastructure.MongoDB;
+using WeCount.Infrastructure.Repositories.BudgetRepository;
+using WeCount.Infrastructure.Repositories.CoupleRepository;
+using WeCount.Infrastructure.Repositories.DebtRepository;
+using WeCount.Infrastructure.Repositories.GoalRepository;
+using WeCount.Infrastructure.Repositories.TransactionRepository;
 using WeCount.Infrastructure.Repositories.UserRepository;
 
 namespace WeCount.Bootstrap
@@ -20,7 +30,7 @@ namespace WeCount.Bootstrap
             IConfiguration config
         )
         {
-            // Web API services
+            //** Web API services
             services.AddControllers();
             services.AddEndpointsApiExplorer();
             services.AddSwaggerGen(c =>
@@ -34,9 +44,40 @@ namespace WeCount.Bootstrap
                 config["MongoDbSettings:ConnectionString"]
             ));
 
-            //** Context & repository
+            //** Context
             services.AddScoped<IMongoDbContext, MongoDbContext>();
+
+            //** Repository
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<ICoupleRepository, CoupleRepository>();
+            services.AddScoped<IBudgetRepository, BudgetRepository>();
+            services.AddScoped<IDebtRepository, DebtRepository>();
+            services.AddScoped<IGoalRepository, GoalRepository>();
+            services.AddScoped<ITransactionRepository, TransactionRepository>();
+
+            // Collections MongoDB pour handlers
+            services.AddScoped<IMongoCollection<User>>(sp =>
+                sp.GetRequiredService<IMongoDbContext>().Users
+            );
+            services.AddScoped<IMongoCollection<Couple>>(sp =>
+                sp.GetRequiredService<IMongoDbContext>().Couples
+            );
+            services.AddScoped<IMongoCollection<Transaction>>(sp =>
+                sp.GetRequiredService<IMongoDbContext>().Transactions
+            );
+            services.AddScoped<IMongoCollection<Budget>>(sp =>
+                sp.GetRequiredService<IMongoDbContext>().Budgets
+            );
+            services.AddScoped<IMongoCollection<Goal>>(sp =>
+                sp.GetRequiredService<IMongoDbContext>().Goals
+            );
+            services.AddScoped<IMongoCollection<Debt>>(sp =>
+                sp.GetRequiredService<IMongoDbContext>().Debts
+            );
+
+            // AutoMapper & MappingService
+            services.AddAutoMapper(typeof(MapperService).Assembly);
+            services.AddScoped<IMapperService, MapperService>();
 
             //** MediatR handlers
             services.AddMediatR(typeof(CreateUserCommand).Assembly);

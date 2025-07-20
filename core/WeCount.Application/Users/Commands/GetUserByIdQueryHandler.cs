@@ -1,22 +1,23 @@
 using MediatR;
+using MongoDB.Driver;
+using WeCount.Application.Common.Mapping;
+using WeCount.Application.DTOs;
 using WeCount.Application.Users.Queries;
 using WeCount.Domain.Entities;
-using WeCount.Infrastructure.Repositories.UserRepository;
 
-namespace WeCount.Application.Users.Commands
+namespace WeCount.Application.Users.Commands;
+
+public class GetUserByIdQueryHandler(IMongoCollection<User> collection, IMapperService mapper)
+    : IRequestHandler<GetUserByIdQuery, UserDto?>
 {
-    public class GetUserByIdQueryHandler : IRequestHandler<GetUserByIdQuery, User?>
+    public async Task<UserDto?> Handle(
+        GetUserByIdQuery request,
+        CancellationToken cancellationToken
+    )
     {
-        private readonly IUserRepository _userRepository;
-
-        public GetUserByIdQueryHandler(IUserRepository userRepository)
-        {
-            _userRepository = userRepository;
-        }
-
-        public async Task<User?> Handle(
-            GetUserByIdQuery request,
-            CancellationToken cancellationToken
-        ) => await _userRepository.GetByIdAsync(request.UserId);
+        var entity = await collection
+            .Find(u => u.Id == request.Id)
+            .FirstOrDefaultAsync(cancellationToken);
+        return entity is null ? null : mapper.Map<UserDto>(entity);
     }
 }
