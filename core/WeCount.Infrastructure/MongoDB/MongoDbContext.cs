@@ -6,13 +6,13 @@ using MongoDB.Bson;
 using MongoDB.Bson.Serialization;
 using MongoDB.Bson.Serialization.Serializers;
 using MongoDB.Driver;
+using WeCount.Application.Common.Interfaces;
 using WeCount.Domain.Entities;
 using WeCount.Domain.Entities.Budget;
 using WeCount.Domain.Entities.Transaction;
 using CoupleEntity = WeCount.Domain.Entities.Couple.Couple;
-using GoalEntity = WeCount.Domain.Entities.Goal;
 using DebtEntity = WeCount.Domain.Entities.Debt;
-using WeCount.Application.Common.Interfaces;
+using GoalEntity = WeCount.Domain.Entities.Goal;
 
 namespace WeCount.Infrastructure.MongoDB;
 
@@ -27,19 +27,22 @@ public class MongoDbContext : IMongoDbContext
 
     public MongoDbContext(IOptions<MongoDbSettings> settings)
     {
-        var client = new MongoClient(settings.Value.ConnectionString);
+        MongoClient client = new(settings.Value.ConnectionString);
         _database = client.GetDatabase(settings.Value.DatabaseName);
     }
 
     public IMongoCollection<User> Users => _database.GetCollection<User>("Users");
-    public IMongoCollection<CoupleEntity> Couples => _database.GetCollection<CoupleEntity>("Couples");
+    public IMongoCollection<CoupleEntity> Couples =>
+        _database.GetCollection<CoupleEntity>("Couples");
     public IMongoCollection<Transaction> Transactions =>
         _database.GetCollection<Transaction>("Transactions");
     public IMongoCollection<Budget> Budgets => _database.GetCollection<Budget>("Budgets");
     public IMongoCollection<GoalEntity> Goals => _database.GetCollection<GoalEntity>("Goals");
     public IMongoCollection<DebtEntity> Debts => _database.GetCollection<DebtEntity>("Debts");
     public IMongoCollection<WeCount.Domain.Entities.Couple.CoupleScoreHistoryItem> CoupleScores =>
-        _database.GetCollection<WeCount.Domain.Entities.Couple.CoupleScoreHistoryItem>("CoupleScores");
+        _database.GetCollection<WeCount.Domain.Entities.Couple.CoupleScoreHistoryItem>(
+            "CoupleScores"
+        );
     public IMongoCollection<TransactionCategory> TransactionCategories =>
         _database.GetCollection<TransactionCategory>("TransactionCategories");
 }

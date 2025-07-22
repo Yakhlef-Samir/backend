@@ -2,6 +2,7 @@ using MediatR;
 using WeCount.Application.Common.Interfaces;
 using WeCount.Application.Common.Interfaces.Repositories;
 using WeCount.Application.DTOs;
+using WeCount.Domain.Entities;
 
 namespace WeCount.Application.Auth.Commands;
 
@@ -28,20 +29,18 @@ public class LoginCommandHandler : IRequestHandler<LoginCommand, AuthResponseDto
     )
     {
         // Find user by email
-        var user = await _userRepository.GetByEmailAsync(request.Email);
-        if (user is null)
+        User user = await _userRepository.GetByEmailAsync(request.Email);
+        if (user is null || user.PasswordHash is null)
         {
             Console.WriteLine("User not found"); // User not found
         }
-
-        // Verify password
         if (!_passwordHasher.VerifyPassword(request.Password, user.PasswordHash))
         {
             Console.WriteLine("Invalid password"); // Invalid password
         }
 
         // Generate token
-        var token = _tokenService.GenerateToken(user);
+        string token = _tokenService.GenerateToken(user);
 
         return new AuthResponseDto(
             user.Id,

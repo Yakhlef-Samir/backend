@@ -33,7 +33,10 @@ namespace WeCount.Infrastructure.Common
         public static async Task<bool> UpdateAsync<T>(this IMongoCollection<T> collection, T entity)
             where T : EntityBase
         {
-            var result = await collection.ReplaceOneAsync(e => e.Id == entity.Id, entity);
+            ReplaceOneResult result = await collection.ReplaceOneAsync(
+                e => e.Id == entity.Id,
+                entity
+            );
             return result.ModifiedCount > 0;
         }
 
@@ -43,7 +46,7 @@ namespace WeCount.Infrastructure.Common
         public static async Task<bool> DeleteAsync<T>(this IMongoCollection<T> collection, Guid id)
             where T : EntityBase
         {
-            var result = await collection.DeleteOneAsync(e => e.Id == id);
+            DeleteResult result = await collection.DeleteOneAsync(e => e.Id == id);
             return result.DeletedCount > 0;
         }
     }

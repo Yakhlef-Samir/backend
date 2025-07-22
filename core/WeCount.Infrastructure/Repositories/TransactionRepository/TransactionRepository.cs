@@ -1,8 +1,8 @@
 using MongoDB.Driver;
+using WeCount.Application.Common.Interfaces;
+using WeCount.Application.Common.Interfaces.Repositories;
 using WeCount.Domain.Entities.Transaction;
 using WeCount.Infrastructure.Common;
-using WeCount.Application.Common.Interfaces.Repositories;
-using WeCount.Application.Common.Interfaces;
 
 namespace WeCount.Infrastructure.Repositories.TransactionRepository
 {

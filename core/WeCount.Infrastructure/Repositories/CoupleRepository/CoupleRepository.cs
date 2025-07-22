@@ -29,7 +29,7 @@ namespace WeCount.Infrastructure.Repositories.CoupleRepository
 
         public async Task<IEnumerable<CoupleScoreHistoryItem>> GetScoreHistoryAsync(Guid coupleId)
         {
-            var list = await _scoreHistoryCollection
+            IEnumerable<CoupleScoreHistoryItem> list = await _scoreHistoryCollection
                 .Find(h => h.CoupleId == coupleId)
                 .ToListAsync();
             return list;

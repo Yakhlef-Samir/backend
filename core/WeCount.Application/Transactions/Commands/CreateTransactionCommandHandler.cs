@@ -1,10 +1,12 @@
 using MediatR;
 using WeCount.Application.Common.Interfaces;
+using WeCount.Application.Common.Interfaces.Repositories;
 using WeCount.Application.Common.Mapping;
 using WeCount.Application.DTOs;
+using WeCount.Domain.Entities;
 using WeCount.Domain.Entities.Transaction;
+using WeCount.Domain.Exceptions;
 using WeCount.Domain.ValueObjects;
-using WeCount.Application.Common.Interfaces.Repositories;
 
 namespace WeCount.Application.Transactions.Commands;
 
@@ -31,11 +33,9 @@ public class CreateTransactionCommandHandler
         CancellationToken cancellationToken
     )
     {
-        var user = await _userRepository.GetByIdAsync(request.UserId);
-        if (user == null)
-        {
-            throw new Exception("User not found");
-        }
+        User? user =
+            await _userRepository.GetByIdAsync(request.UserId)
+            ?? throw new NotFoundException($"User with ID {request.UserId} not found");
 
         var transaction = new Transaction
         {
@@ -50,7 +50,7 @@ public class CreateTransactionCommandHandler
             IsShared = request.IsShared && user.CoupleId != Guid.Empty,
         };
 
-        var createdTransaction = await _transactionRepository.CreateAsync(transaction);
+        Transaction createdTransaction = await _transactionRepository.CreateAsync(transaction);
 
         return new TransactionDto(
             createdTransaction.Id,

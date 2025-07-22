@@ -15,7 +15,7 @@ public class GetUserByIdQueryHandler(IMongoCollection<User> collection, IMapperS
         CancellationToken cancellationToken
     )
     {
-        var entity = await collection
+        User? entity = await collection
             .Find(u => u.Id == request.Id)
             .FirstOrDefaultAsync(cancellationToken);
         return entity is null ? null : mapper.Map<UserDto>(entity);

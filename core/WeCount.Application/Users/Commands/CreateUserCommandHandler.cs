@@ -1,6 +1,6 @@
 using MediatR;
-using WeCount.Domain.Entities;
 using WeCount.Application.Common.Interfaces.Repositories;
+using WeCount.Domain.Entities;
 
 namespace WeCount.Application.Users.Commands
 {
@@ -18,8 +18,8 @@ namespace WeCount.Application.Users.Commands
             CancellationToken cancellationToken
         )
         {
-            var newId = Guid.NewGuid();
-            var user = new User
+            Guid newId = Guid.NewGuid();
+            User? user = new()
             {
                 Id = newId,
                 Name = request.Name,

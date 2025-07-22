@@ -30,13 +30,16 @@ namespace WeCount.Infrastructure.Repositories.TransactionCategoryRepository
 
         public async Task<bool> UpdateAsync(TransactionCategory category)
         {
-            var result = await _categories.ReplaceOneAsync(c => c.Code == category.Code, category);
+            ReplaceOneResult result = await _categories.ReplaceOneAsync(
+                c => c.Code == category.Code,
+                category
+            );
             return result.ModifiedCount > 0;
         }
 
         public async Task<bool> DeleteAsync(string name)
         {
-            var result = await _categories.DeleteOneAsync(c => c.Code == name);
+            DeleteResult result = await _categories.DeleteOneAsync(c => c.Code == name);
             return result.DeletedCount > 0;
         }
     }

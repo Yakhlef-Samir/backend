@@ -18,6 +18,10 @@
     <PackageReference Include="Microsoft.Extensions.Options" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" />
   </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WeCount.Domain\WeCount.Domain.csproj" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WeCount.Infrastructure\WeCount.Infrastructure.csproj" />
     <ProjectReference Include="..\WeCount.Application\WeCount.Application.csproj" />

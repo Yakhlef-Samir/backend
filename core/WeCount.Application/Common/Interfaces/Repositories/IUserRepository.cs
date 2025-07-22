@@ -9,7 +9,7 @@ namespace WeCount.Application.Common.Interfaces.Repositories
     public interface IUserRepository
     {
         Task<User?> GetByIdAsync(Guid Id);
-        Task<User?> GetByEmailAsync(string email);
+        Task<User> GetByEmailAsync(string email);
         Task<IEnumerable<User>> GetAllAsync(int page = 1, int pageSize = 20);
         Task<User> CreateAsync(User user);
         Task<bool> UpdateAsync(User user);
@@ -17,4 +17,3 @@ namespace WeCount.Application.Common.Interfaces.Repositories
         Task<bool> ExistsByEmailAsync(string email);
     }
 }
-

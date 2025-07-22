@@ -1,8 +1,8 @@
 using MongoDB.Driver;
+using WeCount.Application.Common.Interfaces;
+using WeCount.Application.Common.Interfaces.Repositories;
 using WeCount.Domain.Entities;
 using WeCount.Infrastructure.Common;
-using WeCount.Application.Common.Interfaces.Repositories;
-using WeCount.Application.Common.Interfaces;
 
 namespace WeCount.Infrastructure.Repositories.UserRepository
 {
@@ -12,12 +12,12 @@ namespace WeCount.Infrastructure.Repositories.UserRepository
 
         public Task<User?> GetByIdAsync(Guid id) => _users.GetByIdAsync(id)!;
 
-        public async Task<User?> GetByEmailAsync(string email) =>
+        public async Task<User> GetByEmailAsync(string email) =>
             await _users.Find(u => u.Email == email).FirstOrDefaultAsync();
 
         public async Task<IEnumerable<User>> GetAllAsync(int page = 1, int pageSize = 20)
         {
-            var list = await _users.Find(_ => true).Paginate(page, pageSize).ToListAsync();
+            List<User> list = await _users.Find(_ => true).Paginate(page, pageSize).ToListAsync();
             return list;
         }
 

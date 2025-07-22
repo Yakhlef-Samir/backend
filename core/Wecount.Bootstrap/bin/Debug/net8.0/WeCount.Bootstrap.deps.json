@@ -19,6 +19,7 @@
           "MongoDB.Driver": "3.4.0",
           "Swashbuckle.AspNetCore": "8.0.0",
           "WeCount.Application": "1.0.0",
+          "WeCount.Domain": "1.0.0",
           "WeCount.Infrastructure": "1.0.0"
         },
         "runtime": {

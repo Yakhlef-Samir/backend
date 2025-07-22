@@ -4,9 +4,9 @@ C:\Users\samir\Desktop\Projet_fin_couple\backend\core\Wecount.Bootstrap\bin\Debu
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\Wecount.Bootstrap\bin\Debug\net8.0\WeCount.Application.dll
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\Wecount.Bootstrap\bin\Debug\net8.0\WeCount.Domain.dll
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\Wecount.Bootstrap\bin\Debug\net8.0\WeCount.Infrastructure.dll
+C:\Users\samir\Desktop\Projet_fin_couple\backend\core\Wecount.Bootstrap\bin\Debug\net8.0\WeCount.Domain.pdb
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\Wecount.Bootstrap\bin\Debug\net8.0\WeCount.Infrastructure.pdb
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\Wecount.Bootstrap\bin\Debug\net8.0\WeCount.Application.pdb
-C:\Users\samir\Desktop\Projet_fin_couple\backend\core\Wecount.Bootstrap\bin\Debug\net8.0\WeCount.Domain.pdb
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\Wecount.Bootstrap\obj\Debug\net8.0\Wecount.Bootstrap.csproj.AssemblyReference.cache
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\Wecount.Bootstrap\obj\Debug\net8.0\Wecount.Bootstrap.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\samir\Desktop\Projet_fin_couple\backend\core\Wecount.Bootstrap\obj\Debug\net8.0\Wecount.Bootstrap.AssemblyInfoInputs.cache

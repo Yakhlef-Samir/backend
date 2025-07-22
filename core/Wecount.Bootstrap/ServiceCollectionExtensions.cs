@@ -11,6 +11,7 @@ using WeCount.Application.Common.Interfaces.Repositories;
 using WeCount.Application.Common.Mapping;
 using WeCount.Application.Common.Mapping.MappingProfiles;
 using WeCount.Application.Users.Commands;
+using WeCount.Bootstrap.Middlewares;
 using WeCount.Domain.Entities;
 using WeCount.Domain.Entities.Budget;
 using WeCount.Domain.Entities.Couple;
@@ -95,6 +96,11 @@ namespace WeCount.Bootstrap
             return services;
         }
 
+        public static IApplicationBuilder UseExceptionHandling(this IApplicationBuilder app)
+        {
+            return app.UseMiddleware<ExceptionHandlingMiddleware>();
+        }
+
         public static WebApplication ConfigureBootstrapPipeline(this WebApplication app)
         {
             if (app.Environment.IsDevelopment())
@@ -103,11 +109,13 @@ namespace WeCount.Bootstrap
                 app.UseSwaggerUI(c =>
                 {
                     c.SwaggerEndpoint("/swagger/v1/swagger.json", "WeCount API V1");
+                    c.RoutePrefix = string.Empty;
                 });
             }
 
             app.UseHttpsRedirection();
             app.UseRouting();
+            app.UseExceptionHandling();
             app.UseAuthorization();
             app.MapControllers();
 
