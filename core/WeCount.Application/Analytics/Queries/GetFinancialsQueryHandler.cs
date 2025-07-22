@@ -1,7 +1,7 @@
 using MediatR;
+using WeCount.Application.Common.Interfaces.Repositories;
 using WeCount.Application.DTOs.Analytics;
 using WeCount.Domain.Entities.Transaction;
-using WeCount.Application.Common.Interfaces.Repositories;
 
 namespace WeCount.Application.Analytics.Queries
 {
@@ -23,7 +23,9 @@ namespace WeCount.Application.Analytics.Queries
             IEnumerable<Transaction> transactions;
             if (request.CoupleId.HasValue)
             {
-                transactions = await _transactionRepository.GetByCoupleIdAsync(request.CoupleId.Value);
+                transactions = await _transactionRepository.GetByCoupleIdAsync(
+                    request.CoupleId.Value
+                );
             }
             else
             {
@@ -31,11 +33,13 @@ namespace WeCount.Application.Analytics.Queries
             }
 
             // Get current date and calculate start date based on requested months
-            var endDate = DateTime.UtcNow;
-            var startDate = endDate.AddMonths(-request.Months);
+            DateTime endDate = DateTime.UtcNow;
+            DateTime startDate = endDate.AddMonths(-request.Months);
 
             // Filter transactions within the date range
-            var filteredTransactions = transactions.Where(t => t.Date >= startDate && t.Date <= endDate);
+            IEnumerable<Transaction>? filteredTransactions = transactions.Where(t =>
+                t.Date >= startDate && t.Date <= endDate
+            );
 
             // Group transactions by month and year
             var groupedTransactions = filteredTransactions
@@ -52,7 +56,9 @@ namespace WeCount.Application.Analytics.Queries
             // Calculate monthly data
             foreach (var group in groupedTransactions)
             {
-                var monthName = new DateTime(group.Key.Year, group.Key.Month, 1).ToString("MMM yyyy");
+                var monthName = new DateTime(group.Key.Year, group.Key.Month, 1).ToString(
+                    "MMM yyyy"
+                );
                 var incomeTransactions = group.Where(t => t.Amount > 0);
                 var expenseTransactions = group.Where(t => t.Amount < 0);
 
@@ -64,12 +70,14 @@ namespace WeCount.Application.Analytics.Queries
                 totalExpenses += monthlyExpenses;
                 totalSavings += monthlySavings;
 
-                monthlyData.Add(new MonthlyFinancialsDto(
-                    Month: monthName,
-                    Income: monthlyIncome,
-                    Expenses: monthlyExpenses,
-                    Savings: monthlySavings
-                ));
+                monthlyData.Add(
+                    new MonthlyFinancialsDto(
+                        Month: monthName,
+                        Income: monthlyIncome,
+                        Expenses: monthlyExpenses,
+                        Savings: monthlySavings
+                    )
+                );
             }
 
             // Calculate averages

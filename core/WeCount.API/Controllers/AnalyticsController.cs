@@ -1,7 +1,8 @@
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using WeCount.Application.Analytics.Queries;
-using Microsoft.AspNetCore.Authorization;
+using WeCount.Application.DTOs.Analytics;
 
 namespace WeCount.API.Controllers;
 
@@ -22,7 +23,7 @@ public class AnalyticsController : ControllerBase
     {
         // Récupérer l'ID du couple depuis les claims de l'utilisateur (à implémenter)
         // Pour l'instant, on passe null pour récupérer toutes les statistiques
-        var stats = await _mediator.Send(new GetStatsQuery());
+        StatsDto stats = await _mediator.Send(new GetStatsQuery());
         return Ok(stats);
     }
 
@@ -31,7 +32,7 @@ public class AnalyticsController : ControllerBase
     {
         // Récupérer l'ID du couple depuis les claims de l'utilisateur (à implémenter)
         // Pour l'instant, on passe null pour récupérer toutes les données financières
-        var financials = await _mediator.Send(new GetFinancialsQuery(months));
+        FinancialsDto financials = await _mediator.Send(new GetFinancialsQuery(months));
         return Ok(financials);
     }
 }

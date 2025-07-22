@@ -6,22 +6,15 @@ using WeCount.Domain.Entities;
 
 namespace WeCount.Application.Auth.Commands;
 
-public class LoginCommandHandler : IRequestHandler<LoginCommand, AuthResponseDto>
+public class LoginCommandHandler(
+    IUserRepository userRepository,
+    ITokenService tokenService,
+    IPasswordHasher passwordHasher
+) : IRequestHandler<LoginCommand, AuthResponseDto>
 {
-    private readonly IUserRepository _userRepository;
-    private readonly ITokenService _tokenService;
-    private readonly IPasswordHasher _passwordHasher;
-
-    public LoginCommandHandler(
-        IUserRepository userRepository,
-        ITokenService tokenService,
-        IPasswordHasher passwordHasher
-    )
-    {
-        _userRepository = userRepository;
-        _tokenService = tokenService;
-        _passwordHasher = passwordHasher;
-    }
+    private readonly IUserRepository _userRepository = userRepository;
+    private readonly ITokenService _tokenService = tokenService;
+    private readonly IPasswordHasher _passwordHasher = passwordHasher;
 
     public async Task<AuthResponseDto> Handle(
         LoginCommand request,

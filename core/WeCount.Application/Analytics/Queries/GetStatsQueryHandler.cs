@@ -1,28 +1,21 @@
 using MediatR;
+using WeCount.Application.Common.Interfaces.Repositories;
 using WeCount.Application.DTOs.Analytics;
 using WeCount.Domain.Entities;
 using WeCount.Domain.Entities.Transaction;
 using WeCount.Domain.Enums;
-using WeCount.Application.Common.Interfaces.Repositories;
 
 namespace WeCount.Application.Analytics.Queries
 {
-    public class GetStatsQueryHandler : IRequestHandler<GetStatsQuery, StatsDto>
+    public class GetStatsQueryHandler(
+        ITransactionRepository transactionRepository,
+        IGoalRepository goalRepository,
+        IDebtRepository debtRepository
+    ) : IRequestHandler<GetStatsQuery, StatsDto>
     {
-        private readonly ITransactionRepository _transactionRepository;
-        private readonly IGoalRepository _goalRepository;
-        private readonly IDebtRepository _debtRepository;
-
-        public GetStatsQueryHandler(
-            ITransactionRepository transactionRepository,
-            IGoalRepository goalRepository,
-            IDebtRepository debtRepository
-        )
-        {
-            _transactionRepository = transactionRepository;
-            _goalRepository = goalRepository;
-            _debtRepository = debtRepository;
-        }
+        private readonly ITransactionRepository _transactionRepository = transactionRepository;
+        private readonly IGoalRepository _goalRepository = goalRepository;
+        private readonly IDebtRepository _debtRepository = debtRepository;
 
         public async Task<StatsDto> Handle(
             GetStatsQuery request,
@@ -65,15 +58,19 @@ namespace WeCount.Application.Analytics.Queries
             }
 
             // Calculate statistics
-            var currentMonth = DateTime.UtcNow.Month;
-            var currentYear = DateTime.UtcNow.Year;
+            int currentMonth = DateTime.UtcNow.Month;
+            int currentYear = DateTime.UtcNow.Year;
 
-            var monthlyTransactions = transactions.Where(t =>
+            IEnumerable<Transaction>? monthlyTransactions = transactions.Where(t =>
                 t.Date.Month == currentMonth && t.Date.Year == currentYear
             );
 
-            var incomeTransactions = monthlyTransactions.Where(t => t.Amount > 0);
-            var expenseTransactions = monthlyTransactions.Where(t => t.Amount < 0);
+            IEnumerable<Transaction>? incomeTransactions = monthlyTransactions.Where(t =>
+                t.Amount > 0
+            );
+            IEnumerable<Transaction>? expenseTransactions = monthlyTransactions.Where(t =>
+                t.Amount < 0
+            );
 
             decimal totalBalance = transactions.Sum(t => t.Amount);
             decimal monthlyIncome = incomeTransactions.Sum(t => t.Amount);

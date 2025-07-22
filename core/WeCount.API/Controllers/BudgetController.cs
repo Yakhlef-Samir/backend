@@ -2,6 +2,7 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using WeCount.Application.Budgets.Commands;
 using WeCount.Application.Budgets.Queries;
+using WeCount.Application.DTOs.Budget;
 
 namespace WeCount.API.Controllers;
 
@@ -24,12 +25,17 @@ public class BudgetController : ControllerBase
     }
 
     [HttpPut("categories/{category}")]
-    public async Task<IActionResult> UpdateCategory(string category, [FromBody] UpdateBudgetCategoryCommand command)
+    public async Task<IActionResult> UpdateCategory(
+        string category,
+        [FromBody] UpdateBudgetCategoryCommand command
+    )
     {
         if (category != command.Category)
             return BadRequest("Category in URL must match category in body");
-            
-        var result = await _mediator.Send(command);
+
+        BudgetDto? result = await _mediator.Send(command);
+        if (result is null)
+            return NotFound();
         return Ok(result);
     }
 }
