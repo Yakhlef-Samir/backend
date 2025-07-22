@@ -7,13 +7,14 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using MongoDB.Driver;
 using WeCount.Application.Common.Interfaces;
+using WeCount.Application.Common.Interfaces.Repositories;
 using WeCount.Application.Common.Mapping;
+using WeCount.Application.Common.Mapping.MappingProfiles;
 using WeCount.Application.Users.Commands;
 using WeCount.Domain.Entities;
 using WeCount.Domain.Entities.Budget;
 using WeCount.Domain.Entities.Couple;
 using WeCount.Domain.Entities.Transaction;
-using WeCount.Application.Common.Interfaces.Repositories;
 using WeCount.Infrastructure.MongoDB;
 using WeCount.Infrastructure.Repositories.BudgetRepository;
 using WeCount.Infrastructure.Repositories.CoupleRepository;
@@ -22,7 +23,6 @@ using WeCount.Infrastructure.Repositories.GoalRepository;
 using WeCount.Infrastructure.Repositories.TransactionCategoryRepository;
 using WeCount.Infrastructure.Repositories.TransactionRepository;
 using WeCount.Infrastructure.Repositories.UserRepository;
-
 using WeCount.Infrastructure.Services;
 
 namespace WeCount.Bootstrap
@@ -87,6 +87,7 @@ namespace WeCount.Bootstrap
             // AutoMapper & MappingService
             services.AddAutoMapper(typeof(MapperService).Assembly);
             services.AddScoped<IMapperService, MapperService>();
+            services.AddAutoMapper(cfg => cfg.AddProfile<UserMappingProfile>());
 
             //** MediatR handlers
             services.AddMediatR(typeof(CreateUserCommand).Assembly);
